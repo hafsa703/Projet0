@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="recetepates"/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-09 10:32:17 AM"/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC1NRU5HQzJVOzIwMjUtMTAtMDk7MDg6NDY6NTMgQU07Mjg0Mw=="/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC1NRU5HQzJVOzIwMjUtMTAtMDk7MTA6MzI6MTcgQU07MTsyOTM5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Acheter les ingr&#233;dients n&#233;cessaire&quot;" newline="True"/>
+            <declare name="quantiteFarine" type="Integer" array="False" size=""/>
+            <assign variable="quantiteFarine" expression="250"/>
+            <declare name="litreLait" type="Real" array="False" size=""/>
+            <assign variable="litreLait" expression="0.5"/>
+            <declare name="nombreOeuf" type="Integer" array="False" size=""/>
+            <assign variable="nombreOeuf" expression="4"/>
+            <declare name="csSucre" type="Integer" array="False" size=""/>
+            <assign variable="csSucre" expression="2"/>
+            <declare name="pinceeSel" type="Integer" array="False" size=""/>
+            <assign variable="pinceeSel" expression="1"/>
+            <declare name="quantiteBeurre" type="Integer" array="False" size=""/>
+            <assign variable="quantiteBeurre" expression="50"/>
+            <output expression="&quot;Faire fondre le beurre puis laissez le refroidir un peu&quot;" newline="True"/>
+            <output expression="&quot;Mettre la farine le sel et le sucre dans un saladier&quot;" newline="True"/>
+            <output expression="&quot;Faire un puit au milieu puis verser le oeufs&quot;" newline="True"/>
+            <declare name="m&#233;lange&#201;pais" type="Boolean" array="False" size=""/>
+            <assign variable="m&#233;lange&#201;pais" expression="False"/>
+            <while expression="m&#233;lange&#201;pais == False">
+                <declare name="melange" type="String" array="False" size=""/>
+                <assign variable="melange" expression="&quot;epais&quot;"/>
+                <output expression="&quot;M&#233;langer jusqu'&#224; ce que le m&#233;lange devienne &#233;pais et ajouter le lait froid petit &#224; petit&quot;" newline="True"/>
+                <if expression="melange == &quot;epais&quot;">
+                    <then>
+                        <assign variable="m&#233;lange&#201;pais" expression="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <declare name="pate" type="String" array="False" size=""/>
+            <assign variable="pate" expression="&quot;pas fluide&quot;"/>
+            <if expression="pate == &quot;fluide&quot;">
+                <then/>
+                <else>
+                    <output expression="&quot;Rajouter un peu de lait&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Ajouter ensuite le beurre fondue puis m&#233;langer bien&quot;" newline="True"/>
+            <declare name="po&#234;leTemp&#233;rature" type="String" array="False" size=""/>
+            <assign variable="po&#234;leTemp&#233;rature" expression="&quot;froid&quot;"/>
+            <output expression="&quot;Prendre un po&#234;le et la faire chauffer&quot;" newline="True"/>
+            <while expression="po&#234;leTemp&#233;rature == &quot;froid&quot;">
+                <declare name="poele" type="String" array="False" size=""/>
+                <assign variable="poele" expression="&quot;chaud&quot;"/>
+                <output expression="&quot;Continuer &#224; faire chauffer la po&#234;le&quot;" newline="True"/>
+                <if expression="poele == &quot;chaud&quot;">
+                    <then>
+                        <assign variable="po&#234;leTemp&#233;rature" expression="&quot;chaud&quot;"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <declare name="po&#234;leAntiAdh&#233;sive" type="Boolean" array="False" size=""/>
+            <assign variable="po&#234;leAntiAdh&#233;sive" expression="False"/>
+            <if expression="po&#234;leAntiAdh&#233;sive == True">
+                <then/>
+                <else>
+                    <output expression="&quot;Mettre de l&#8217;huile sur la po&#234;le&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Prendre une louche et verser de la p&#226;te dans la po&#234;le chaude et faire un mouvement de rotation pour r&#233;partir la p&#226;te&quot;" newline="True"/>
+            <declare name="restePate" type="Boolean" array="False" size=""/>
+            <assign variable="restePate" expression="True"/>
+            <declare name="quantiteRestante" type="Integer" array="False" size=""/>
+            <assign variable="quantiteRestante" expression="3"/>
+            <while expression="restePate == True">
+                <declare name="cr&#234;peFinis" type="Boolean" array="False" size=""/>
+                <assign variable="cr&#234;peFinis" expression="False"/>
+                <while expression="cr&#234;peFinis == False">
+                    <output expression="&quot;Attendre&quot;" newline="True"/>
+                    <declare name="crepeCouleur" type="String" array="False" size=""/>
+                    <assign variable="crepeCouleur" expression="&quot;roux&quot;"/>
+                    <declare name="deuxCot&#233;s" type="Boolean" array="False" size=""/>
+                    <if expression="crepeCouleur == &quot;roux&quot;">
+                        <then>
+                            <output expression="&quot;Retourner la cr&#234;pe&quot;" newline="True"/>
+                            <assign variable="deuxCot&#233;s" expression="True"/>
+                        </then>
+                        <else>
+                            <assign variable="deuxCot&#233;s" expression="False"/>
+                        </else>
+                    </if>
+                    <if expression="deuxCot&#233;s == True">
+                        <then>
+                            <output expression="&quot;Enlever la crepe de la po&#234;le&quot;" newline="True"/>
+                            <assign variable="cr&#234;peFinis" expression="True"/>
+                            <assign variable="quantiteRestante" expression="quantiteRestante - 1"/>
+                        </then>
+                        <else>
+                            <assign variable="cr&#234;peFinis" expression="False"/>
+                        </else>
+                    </if>
+                    <if expression="quantiteRestante == 0">
+                        <then>
+                            <assign variable="restePate" expression="False"/>
+                            <output expression="&quot;Il ne reste plus de pate&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Il reste de la pates tu peux encore faire une crepe&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </while>
+            </while>
+            <output expression="&quot;Vous pouvez maintenant manger vos cr&#234;pes&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

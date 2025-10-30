@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Calculatrice"/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-16 10:26:53 AM"/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC1NRU5HQzJVOzIwMjUtMTAtMTY7MDg6NDQ6NDUgQU07Mjg0MA=="/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC1NRU5HQzJVOzIwMjUtMTAtMTY7MTA6MjY6NTMgQU07NDsyOTQz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, sum, rest, prod, quo, pot, rai, o" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingresa el primer numero : &quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Ingresa el segondo numero :&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;Clica 1 si quieres sumar, clica 2 si quieres restar, clica 3 si quieres multiplicar, clica 4 si quieres dividir, clica 5 si quieres la potencia o clica 6 si quieres la raiz cuadrada de ambos numeros.&quot;" newline="True"/>
+            <input variable="o"/>
+            <if expression="o==1">
+                <then>
+                    <assign variable="sum" expression="a+b"/>
+                    <output expression="&quot;La suma de los dos numeros es &quot; &amp;sum" newline="True"/>
+                </then>
+                <else>
+                    <if expression="o==2">
+                        <then>
+                            <assign variable="rest" expression="a-b"/>
+                            <output expression="&quot;La resta de tus dos numeros es &quot; &amp;rest" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="o==3">
+                                <then>
+                                    <assign variable="prod" expression="a*b"/>
+                                    <output expression="&quot;La multiplicacion de los dos numeros es &quot; &amp;prod" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="o==4">
+                                        <then>
+                                            <assign variable="quo" expression="a/b"/>
+                                            <output expression="&quot;La division de los dos numeros es &quot; &amp;quo" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="o==5">
+                                                <then>
+                                                    <assign variable="pot" expression="a^b"/>
+                                                    <output expression="&quot;La potencia dle primer numero sobre el segundo numero es &quot; &amp;pot" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="o==6">
+                                                        <then>
+                                                            <assign variable="rai" expression="sqrt(a)"/>
+                                                            <output expression="&quot;La raiz cuadrada del primer numero es &quot; &amp;rai" newline="True"/>
+                                                            <assign variable="rai" expression="sqrt(b)"/>
+                                                            <output expression="&quot;La raiz cuadrada del segundo numero es &quot; &amp;rai" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;Ingresa un numero valido.&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
